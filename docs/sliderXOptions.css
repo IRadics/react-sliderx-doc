@@ -1,0 +1,54 @@
+.sampleRightExample .sliderX {
+  /*Dynamic color variable, changed by js - do not change directly*/
+  --sliderX-var-dynamic-color: unset;
+
+  /* --- SLIDER --- */
+  --sliderX-filter: unset;
+  --sliderX-hover-filter: unset;
+  --sliderX-active-filter: unset;
+  --sliderX-disabled-filter: unset;
+
+  /* --- SLIDER TRACK --- */
+  --sliderX-track-height: 1em;
+  --sliderX-track-border: none;
+  --sliderX-track-border-radius: 1em;
+  --sliderX-track-box-shadow: unset;
+
+  /* only applies if no colors are passed to the component */
+  --sliderX-track-background-color: LightGray;
+
+  /* track:hover */
+  --sliderX-track-hover-box-shadow: unset;
+  /* track:active */
+  --sliderX-track-active-box-shadow: unset;
+  /* track:disabled */
+  --sliderX-track-disabled-box-shadow: unset;
+
+  /* --- SLIDER THUMB --- */
+  --sliderX-thumb-width: 2em;
+  --sliderX-thumb-height: 2em;
+
+  --sliderX-thumb-color: white;
+  --sliderX-thumb-border: 3px solid VAR(--sliderX-var-dynamic-color);
+  --sliderX-thumb-border-radius: 2em;
+  --sliderX-thumb-offset: 0em;
+  --sliderX-thumb-box-shadow: unset;
+  /* thumb:hover */
+  --sliderX-thumb-hover-color: unset;
+  --sliderX-thumb-hover-border: unset;
+  --sliderX-thumb-hover-border-radius: unset;
+  --sliderX-thumb-hover-offset: unset;
+  --sliderX-thumb-hover-box-shadow: unset;
+  /* thumb:active */
+  --sliderX-thumb-active-color: unset;
+  --sliderX-thumb-active-border: unset;
+  --sliderX-thumb-active-border-radius: unset;
+  --sliderX-thumb-active-offset: unset;
+  --sliderX-thumb-active-box-shadow: unset;
+  /* thumb:disabled */
+  --sliderX-thumb-disabled-color: unset;
+  --sliderX-thumb-disabled-border: unset;
+  --sliderX-thumb-disabled-border-radius: unset;
+  --sliderX-thumb-disabled-offset: unset;
+  --sliderX-thumb-disabled-box-shadow: unset;
+}

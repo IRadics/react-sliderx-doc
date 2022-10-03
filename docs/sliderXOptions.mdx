@@ -1,0 +1,88 @@
+---
+title: EnumSliderXOptions
+sidebar_position: 3
+---
+
+import { EnumSliderXOptions, SliderXSelector } from "@iradics/react-sliderx";
+import "./sliderXOptions.css";
+
+export const SliderXExampleColorSample = () => (
+  <div>
+    <p></p>
+    <p>
+      Sampled Left (default)
+      <SliderXSelector
+        optionCount={5}
+        colors={["#3cc9a3", "#2f8eb8"]}
+        className={"sampleRightExample"}
+        animationTime={100}
+        defaultOptionIndex={2}
+      >
+        {" "}
+      </SliderXSelector>
+    </p>
+    <p></p>
+    <p>
+      <b>
+        <u>Sampled Right</u>
+      </b>
+      <SliderXSelector
+        optionCount={5}
+        colors={["#3cc9a3", "#2f8eb8"]}
+        className={"sampleRightExample"}
+        animationTime={100}
+        defaultOptionIndex={2}
+        options={EnumSliderXOptions.DynamicColorSampleRight}
+      >
+        {" "}
+      </SliderXSelector>
+    </p>
+  </div>
+);
+
+export const SliderXExampleDisableCentered = () => (
+  <div>
+    <p></p>
+    <SliderXSelector
+      optionCount={5}
+      colors={["#3cc9a3", "#2f8eb8"]}
+      className={"sampleRightExample"}
+      animationTime={100}
+      defaultOptionIndex={0}
+      options={EnumSliderXOptions.DisableCenteredOptions}
+    >
+      {" "}
+    </SliderXSelector>
+  </div>
+);
+
+export const SliderXExampleClickableLabels = () => (
+  <div>
+    <p></p>
+    <SliderXSelector
+      optionCount={5}
+      colors={["#3cc9a3", "#2f8eb8", "#6617a3", "#dea002", "#e00000"]}
+      className={"sampleRightExample"}
+      labels={[
+        "click text for \nindex 0",
+        "click text for \nindex 1",
+        "click text for \nindex 2",
+        "click text for \nindex 3",
+        "click text for \nindex 4",
+      ]}
+      animationTime={100}
+      defaultOptionIndex={0}
+      options={EnumSliderXOptions.ClickableLabels}
+    >
+      {" "}
+    </SliderXSelector>
+  </div>
+);
+
+Options which can be passed via the "options" prop to the SliderX components
+
+|                  Option | Selector | Classic | Description                                                                                                                                                                                                                 |
+| ----------------------: | :------: | :-----: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| DynamicColorSampleRight |    x     |    x    | In case of the thumb being exactly between two colors, sample the right side color of the thumb instead of the left side <SliderXExampleColorSample></SliderXExampleColorSample>                                            |
+|  DisableCenteredOptions |    x     |         | Disable the default centering of the options in SliderXSelector. This way the selectable options span from the very beginning of the slider to the very end <SliderXExampleDisableCentered></SliderXExampleDisableCentered> |
+|         ClickableLabels |    x     |         | Makes click on the labels change the slider position <SliderXExampleClickableLabels></SliderXExampleClickableLabels>                                                                                                        |

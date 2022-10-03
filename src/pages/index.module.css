@@ -21,3 +21,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.buttonMainPage {
+  padding: 1em;
+}

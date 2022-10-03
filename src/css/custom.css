@@ -6,10 +6,10 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary: #61dafb;
+  --ifm-color-primary-dark: #38d0fa;
+  --ifm-color-primary-darker: #06c4f9;
+  --ifm-color-primary-darkest: #059dc7;
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
@@ -18,7 +18,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -27,4 +27,109 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --ifm-font-color-base: white;
+  --ifm-font-color-base-inverse: white;
+  --ifm-font-color-secondary: black;
+}
+
+.buttonHeader:hover {
+  background-color: var(--ifm-color-primary);
+  border: none;
+}
+
+.hero--primary {
+  background-color: #1e1e1e;
+}
+
+.cursor {
+  animation: cursor 2s linear infinite;
+  animation-timing-function: steps(1);
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.sliderXContainer {
+  width: 400px;
+  margin: auto;
+  padding-top: 1em;
+}
+
+.sliderXContainer table {
+  display: table;
+}
+
+.sliderXPackageSelector td:nth-child(1) span {
+  color: #cb3738;
+  text-decoration-line: underline;
+}
+.sliderXPackageSelector td:nth-child(2) span {
+  color: #2f8eb8;
+  text-decoration-line: underline;
+}
+
+.sliderXContainer .sliderX-labels {
+  padding-top: 130px;
+}
+.sliderXContainer .sliderX {
+  /*Dynamic color variable, changed by js - do not change directly*/
+  --sliderX-var-dynamic-color: unset;
+
+  /* --- SLIDER --- */
+  --sliderX-filter: unset;
+  --sliderX-hover-filter: unset;
+  --sliderX-active-filter: unset;
+  --sliderX-disabled-filter: unset;
+
+  /* --- SLIDER TRACK --- */
+  --sliderX-track-height: 2em;
+  --sliderX-track-border: none;
+  --sliderX-track-border-radius: 0.5em;
+  --sliderX-track-box-shadow: unset;
+
+  /* only applies if no colors are passed to the component */
+  --sliderX-track-background-color: LightGray;
+
+  /* track:hover */
+  --sliderX-track-hover-box-shadow: unset;
+  /* track:active */
+  --sliderX-track-active-box-shadow: unset;
+  /* track:disabled */
+  --sliderX-track-disabled-box-shadow: unset;
+
+  /* --- SLIDER THUMB --- */
+  --sliderX-thumb-width: 2em;
+  --sliderX-thumb-height: 3em;
+
+  --sliderX-thumb-color: white;
+  --sliderX-thumb-border: 3px solid var(--sliderX-var-dynamic-color);
+  --sliderX-thumb-border-radius: 2em 2em 2em 2em;
+  --sliderX-thumb-offset: 0.5em;
+  --sliderX-thumb-box-shadow: unset;
+  /* thumb:hover */
+  --sliderX-thumb-hover-color: unset;
+  --sliderX-thumb-hover-border: unset;
+  --sliderX-thumb-hover-border-radius: unset;
+  --sliderX-thumb-hover-offset: unset;
+  --sliderX-thumb-hover-box-shadow: unset;
+  /* thumb:active */
+  --sliderX-thumb-active-color: unset;
+  --sliderX-thumb-active-border: unset;
+  --sliderX-thumb-active-border-radius: unset;
+  --sliderX-thumb-active-offset: unset;
+  --sliderX-thumb-active-box-shadow: unset;
+  /* thumb:disabled */
+  --sliderX-thumb-disabled-color: unset;
+  --sliderX-thumb-disabled-border: unset;
+  --sliderX-thumb-disabled-border-radius: unset;
+  --sliderX-thumb-disabled-offset: unset;
+  --sliderX-thumb-disabled-box-shadow: unset;
 }
