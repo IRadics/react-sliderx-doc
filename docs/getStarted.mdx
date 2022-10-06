@@ -1,0 +1,58 @@
+---
+sidebar_position: 0
+title: Getting started
+---
+
+import CodeBlock from "@theme/CodeBlock";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { SliderXClassic, SliderXSelector } from "@iradics/react-sliderx";
+import { useState } from "react";
+
+export const Browsers = () => {};
+
+export const SliderXSelectorGetStarted = () => {
+  const [hintIndex, setHintIndex] = useState(0);
+  const hints = ["test", "2", "3"];
+  return (
+    <div>
+      <h3>{hints[hintIndex]}</h3>
+      <div style={{ width: "75%", margin: "auto" }}>
+        <SliderXSelector
+          optionCount={3}
+          defaultOptionIndex={0}
+          colors={["#e1392c", "a4c639", "#3178c6"]}
+          onChange={(i) => {
+            setHintIndex(i);
+          }}
+          labels={[
+            "Browser compatibility",
+            "Device Compatibility",
+            "TypeScript",
+          ]}
+        ></SliderXSelector>
+      </div>
+    </div>
+  );
+};
+
+# Getting started
+
+Add SliderX your project:
+
+<Tabs>
+  <TabItem value="npm" label="npm">
+    <CodeBlock language={"bash"}>npm install @iradics/react-sliderx</CodeBlock>
+  </TabItem>
+  <TabItem value="yarn" label="yarn">
+    <CodeBlock language={"bash"}>yarn add @iradics/react-sliderx</CodeBlock>
+  </TabItem>
+</Tabs>
+
+Import SliderX component(s) into your project:
+
+```tsx
+import { SliderXClassic, SliderXSelector } from "@iradics/react-sliderx";
+```
+
+<SliderXSelectorGetStarted></SliderXSelectorGetStarted>

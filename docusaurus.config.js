@@ -8,7 +8,7 @@ const vsdark = require("prism-react-renderer/themes/vsdark");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "react-SliderX",
-  tagline: "A powerful slider component for React",
+  tagline: "A highly customizable slider component for React",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   onBrokenLinks: "throw",

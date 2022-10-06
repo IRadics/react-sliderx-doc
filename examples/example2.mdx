@@ -1,0 +1,71 @@
+import CodeBlock from "@theme/CodeBlock";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { EnumSliderXOptions, SliderXSelector } from "@iradics/react-sliderx";
+
+export const SliderXExample2 = () => (
+  <div style={{ width: "75%", margin: "auto", paddingBottom: "1em" }}>
+    <p></p>
+    <SliderXSelector
+      optionCount={6}
+      colors={["#87CEEB"]}
+      labels={["Budapest", "Győr", "Bratislava", "Brno", "Prague", "Berlin"]}
+      className={"sliderXExample2"}
+      animationTime={250}
+      defaultOptionIndex={0}
+      options={
+        EnumSliderXOptions.DisableCenteredOptions |
+        EnumSliderXOptions.ClickableLabels
+      }
+    >
+      {" "}
+    </SliderXSelector>
+  </div>
+);
+
+<SliderXExample2></SliderXExample2>
+<details className={"codeExampleDetails"}>
+  <summary>Code</summary>
+  <div>
+    <Tabs>
+      <TabItem value="jsx" label="JavaScript">
+        <CodeBlock language={"jsx"}>{`<SliderXSelector
+      optionCount={6}
+      colors={["#87CEEB"]}
+      labels={["Budapest", "Győr", "Bratislava", "Brno", "Prague", "Berlin"]}
+      className={"sliderXExample2"}
+      animationTime={250}
+      defaultOptionIndex={0}
+      options={
+        EnumSliderXOptions.DisableCenteredOptions |
+        EnumSliderXOptions.ClickableLabels
+      }
+    >
+    </SliderXSelector>`}</CodeBlock>
+      </TabItem>
+      <TabItem value="css" label="CSS">
+          <CodeBlock language={"css"}>{
+`.sliderXExample2 {
+  --sliderX-track-height: 1.5em;
+  --sliderX-thumb-height: 1.5em;
+  --sliderX-thumb-width: 2em;
+  --sliderX-thumb-color: magenta;
+  --sliderX-thumb-border-radius: 0.5em;
+  --sliderX-track-border-radius: 0.5em;
+}
+.sliderXExample2 .sliderXExample2-labels {
+  position: relative;
+  width: 120%;
+  left: -10%;
+}
+.sliderXExample2-labels .sliderXExample2-label {
+  color: whitesmoke;
+  text-decoration: underline 0.5px;
+}
+`}</CodeBlock>
+
+</TabItem>
+</Tabs>
+
+  </div>
+</details>

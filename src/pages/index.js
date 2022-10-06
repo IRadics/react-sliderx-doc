@@ -34,7 +34,7 @@ function HomepageHeader() {
           <div className={styles.buttonMainPage}>
             <Link
               className="button button--secondary button--lg buttonHeader"
-              to="/docs/intro"
+              to="/docs/sliderXExamples"
             >
               Examples
             </Link>

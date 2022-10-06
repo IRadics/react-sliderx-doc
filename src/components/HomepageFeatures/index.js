@@ -5,11 +5,20 @@ import { EnumSliderXOptions, SliderXSelector } from "@iradics/react-sliderx";
 import "./styles.module.css";
 import { useState } from "react";
 
+const features = () => {
+  return (
+    <div>
+      <h3>Easy to customize, lightweight</h3>
+    </div>
+  );
+};
+
 export default function HomepageFeatures() {
   const [installIndex, setInstallIndex] = useState(0);
   return (
     <div className={styles.mainBody}>
-      <h1>Install:</h1>
+      {features()}
+      <h2>Install:</h2>
       <code className="codeBlock">
         {
           [
@@ -18,7 +27,7 @@ export default function HomepageFeatures() {
           ][installIndex]
         }
       </code>
-      <div className={"sliderXContainer"}>
+      <div className={"sliderXPackageSelectorWrapper"}>
         <SliderXSelector
           optionCount={2}
           labels={["npm", "yarn"]}

@@ -1,0 +1,211 @@
+---
+title: Styling
+sidebar_position: 4
+---
+
+Styling of the SliderX component is easy.
+You do not need to worry about the different selectors and implementation for different browsers, you just edit these variables and the component does all the legwork for you.
+
+## Styling the slider
+
+### Dynamic color
+
+SliderX implements dynamic color change based on the slider thumb position on the colored track.
+
+For this, you can use the following variable (do not change this variable in CSS as this is controlled by the SliderX components)
+
+```css
+--sliderX-var-dynamic-color
+```
+
+import { EnumSliderXOptions, SliderXSelector } from "@iradics/react-sliderx";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import "./sliderXStyling.css";
+
+export const SliderXColoredThumbExample = () => (
+  <div style={{ width: "75%", margin: "auto" }}>
+    <SliderXSelector
+      optionCount={5}
+      colors={["#3cc9a3", "#2f8eb8", "#6617a3", "#dea002", "#e00000"]}
+      labels={["option 1", "option 2", "option 3", "option 4", "option 5"]}
+      animationTime={100}
+      defaultOptionIndex={2}
+      className="sliderXColoredThumbExample"
+    >
+      {" "}
+    </SliderXSelector>
+    <p></p>
+  </div>
+);
+
+export const SliderXLabelStylingExample = () => (
+  <div style={{ width: "75%", margin: "auto" }}>
+    <SliderXSelector
+      optionCount={4}
+      colors={["#ff5733", "#9b9a9e", "#FFD700", "#E5E4E2"]}
+      labels={["BRONZE", "SILVER", "GOLD \n best value!", "PLATINUM"]}
+      animationTime={100}
+      defaultOptionIndex={2}
+      className="sliderXLabelStylingExample"
+      options={EnumSliderXOptions.ClickableLabels}
+    >
+      {" "}
+    </SliderXSelector>
+    <p></p>
+  </div>
+);
+
+Below is an example of using the dynamic variable with few other tweaks:
+
+<Tabs>
+  <TabItem value="css" label="CSS">
+
+```css
+.sliderXColoredThumbExample {
+  /*Blurred gray shadow for thumb and track*/
+  --sliderX-track-box-shadow: 0px 0px 10px #888888;
+  --sliderX-thumb-box-shadow: 0px 0px 10px #888888;
+
+  /*Dynamic colored thumb with 2px white border*/
+  --sliderX-thumb-color: var(--sliderX-var-dynamic-color);
+  --sliderX-thumb-border: 2px solid white;
+
+  /*Reversed on hover*/
+  --sliderX-thumb-hover-color: white;
+  --sliderX-thumb-hover-border: 2px solid var(--sliderX-var-dynamic-color);
+
+  /*Full fill on dragging*/
+  --sliderX-thumb-active-color: var(--sliderX-var-dynamic-color);
+  --sliderX-thumb-active-border: 0px;
+
+  /*Finally, "capsule-like" thumb*/
+  --sliderX-thumb-width: 1.5em;
+  --sliderX-thumb-height: 2.5em;
+}
+```
+
+</TabItem>
+  <TabItem value="jsx" label="JavaScript">
+
+```jsx
+<SliderXSelector
+  optionCount={5}
+  colors={["#3cc9a3", "#2f8eb8", "#6617a3", "#dea002", "#e00000"]}
+  className={"sliderXColoredThumbExample "}
+  labels={["option 1", "option 2", "option 3", "option 4", "option 5"]}
+  animationTime={100}
+  defaultOptionIndex={2}
+></SliderXSelector>
+```
+
+</TabItem>
+
+</Tabs>
+
+<SliderXColoredThumbExample></SliderXColoredThumbExample>
+
+### Variables
+
+See the full list of available CSS variables (with default values) for styling the slider. For guaranteed cross-browser compability and consistent look, please only use these for the slider
+:::danger Take care
+SliderX is **not compatible** with **Internet Explorer** or the **older Edge** (before version 79) browsers.
+:::
+
+```css
+/* --- SLIDER --- */
+--sliderX-filter: unset;
+--sliderX-hover-filter: unset;
+--sliderX-active-filter: unset;
+--sliderX-disabled-filter: unset;
+
+/* --- SLIDER TRACK --- */
+--sliderX-track-height: 1em;
+--sliderX-track-border: none;
+--sliderX-track-border-radius: 1em;
+--sliderX-track-box-shadow: unset;
+
+/* only applies if no colors are passed to the component */
+--sliderX-track-background-color: LightGray;
+
+/* track:hover */
+--sliderX-track-hover-box-shadow: unset;
+/* track:active */
+--sliderX-track-active-box-shadow: unset;
+/* track:disabled */
+--sliderX-track-disabled-box-shadow: unset;
+
+/* --- SLIDER THUMB --- */
+--sliderX-thumb-width: 2em;
+--sliderX-thumb-height: 2em;
+
+--sliderX-thumb-color: white;
+--sliderX-thumb-border: 2px solid var(--sliderX-var-dynamic-color, #000000);
+--sliderX-thumb-border-radius: 2em;
+--sliderX-thumb-offset: 0em;
+--sliderX-thumb-box-shadow: unset;
+
+/* thumb:hover */
+--sliderX-thumb-hover-color: unset;
+--sliderX-thumb-hover-border: unset;
+--sliderX-thumb-hover-border-radius: unset;
+--sliderX-thumb-hover-offset: unset;
+--sliderX-thumb-hover-box-shadow: unset;
+
+/* thumb:active */
+--sliderX-thumb-active-color: unset;
+--sliderX-thumb-active-border: unset;
+--sliderX-thumb-active-border-radius: unset;
+--sliderX-thumb-active-offset: unset;
+--sliderX-thumb-active-box-shadow: unset;
+
+/* thumb:disabled */
+--sliderX-thumb-disabled-color: unset;
+--sliderX-thumb-disabled-border: unset;
+--sliderX-thumb-disabled-border-radius: unset;
+--sliderX-thumb-disabled-offset: unset;
+--sliderX-thumb-disabled-box-shadow: unset;
+```
+
+## Styling the labels (SliderXSelector)
+
+You can style the labels (table) element and label (span) element via -labels and -label postfixes:
+
+<Tabs>
+  <TabItem value="css" label="CSS">
+
+```css
+.sliderXLabelStylingExample-labels .sliderXLabelStylingExample-label {
+  padding-top: 0em;
+  color: white;
+  line-height: 100%;
+}
+
+.sliderXLabelStylingExample-labels
+  td:nth-child(3)
+  .sliderXLabelStylingExample-label {
+  color: blue;
+  border-radius: 1em;
+  background-color: #ffd700;
+}
+```
+
+</TabItem>
+  <TabItem value="jsx" label="JavaScript">
+
+```jsx
+<SliderXSelector
+  optionCount={4}
+  colors={["#ff5733", "#9b9a9e", "#FFD700", "#E5E4E2"]}
+  labels={["BRONZE", "SILVER", "GOLD \n best value!", "PLATINUM"]}
+  animationTime={100}
+  defaultOptionIndex={2}
+  className="sliderXLabelStylingExample"
+  options={EnumSliderXOptions.ClickableLabels}
+></SliderXSelector>
+```
+
+</TabItem>
+
+</Tabs>
+<SliderXLabelStylingExample></SliderXLabelStylingExample>

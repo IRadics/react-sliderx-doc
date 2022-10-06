@@ -1,10 +1,16 @@
 ---
-title: EnumSliderXOptions
+title: SliderX Options
 sidebar_position: 3
 ---
 
 import { EnumSliderXOptions, SliderXSelector } from "@iradics/react-sliderx";
 import "./sliderXOptions.css";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+export const ColorText = ({ children, color }) => (
+  <span style={{ color: color }}>{children}</span>
+);
 
 export const SliderXExampleColorSample = () => (
   <div>
@@ -23,9 +29,7 @@ export const SliderXExampleColorSample = () => (
     </p>
     <p></p>
     <p>
-      <b>
-        <u>Sampled Right</u>
-      </b>
+      <u>Sampled Right</u>
       <SliderXSelector
         optionCount={5}
         colors={["#3cc9a3", "#2f8eb8"]}
@@ -79,10 +83,29 @@ export const SliderXExampleClickableLabels = () => (
   </div>
 );
 
-Options which can be passed via the "options" prop to the SliderX components
+You can pass additional options which change the behaviour of the SliderX component.
 
-|                  Option | Selector | Classic | Description                                                                                                                                                                                                                 |
-| ----------------------: | :------: | :-----: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| DynamicColorSampleRight |    x     |    x    | In case of the thumb being exactly between two colors, sample the right side color of the thumb instead of the left side <SliderXExampleColorSample></SliderXExampleColorSample>                                            |
-|  DisableCenteredOptions |    x     |         | Disable the default centering of the options in SliderXSelector. This way the selectable options span from the very beginning of the slider to the very end <SliderXExampleDisableCentered></SliderXExampleDisableCentered> |
-|         ClickableLabels |    x     |         | Makes click on the labels change the slider position <SliderXExampleClickableLabels></SliderXExampleClickableLabels>                                                                                                        |
+Use <ColorText color="#25c2a0">**EnumSliderXOptions**</ColorText> to access these options.
+
+<Tabs>
+
+  <TabItem value="jsx" label="JavaScript">
+
+```jsx
+<SliderXSelector
+  ...
+  // highlight-next-line
+  options={EnumSliderXOptions.DynamicColorSampleRight | EnumSliderXOptions.ClickableLabels}
+  ...
+></SliderXSelector>
+```
+
+</TabItem>
+
+</Tabs>
+
+| <ColorText color="#25c2a0">EnumSliderXOptions.</ColorText> | Selector | Classic | Description                                                                                                                                                                                                                 |
+| ---------------------------------------------------------: | :------: | :-----: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                    DynamicColorSampleRight |    x     |    x    | In case of the thumb being exactly between two colors, sample the right side color of the thumb instead of the left side <SliderXExampleColorSample></SliderXExampleColorSample>                                            |
+|                                     DisableCenteredOptions |    x     |         | Disable the default centering of the options in SliderXSelector. This way the selectable options span from the very beginning of the slider to the very end <SliderXExampleDisableCentered></SliderXExampleDisableCentered> |
+|                                            ClickableLabels |    x     |         | Makes click on the labels change the slider position <SliderXExampleClickableLabels></SliderXExampleClickableLabels>                                                                                                        |
