@@ -1600,10 +1600,10 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@iradics/react-sliderx@^1.0.0":
-  "integrity" "sha512-MFu8KF01dMAla1LxhH10NFkbnc/jCc9V1lAz8TsJmcdV9XqD5D3P3kvezG5WJwhCkpoBPNYdKw4Fv+PFf0ZNtA=="
-  "resolved" "https://npm.pkg.github.com/download/@iradics/react-sliderx/1.0.0/b46891c9752b16fde115f8a683df6c63635c67f2"
-  "version" "1.0.0"
+"@iradics/react-sliderx@^1.0.1":
+  "integrity" "sha512-4vOfkaMmPm3WoeJ4YkL2fVeQGFfk/bClNug0hiaB6QJQQPhZMxY2alAqpQ6vJTDkx28PjJBp/k6cmls/O/7S3w=="
+  "resolved" "https://registry.npmjs.org/@iradics/react-sliderx/-/react-sliderx-1.0.1.tgz"
+  "version" "1.0.1"
 
 "@jridgewell/gen-mapping@^0.1.0":
   "integrity" "sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w=="
