@@ -72,9 +72,6 @@
   --sliderX-track-height: 2em;
   --sliderX-track-border-radius: 0.5em;
 
-  /* only applies if no colors are passed to the component */
-  --sliderX-track-background-color: LightGray;
-
   /* --- SLIDER THUMB --- */
   --sliderX-thumb-width: 2em;
   --sliderX-thumb-height: 3em;
