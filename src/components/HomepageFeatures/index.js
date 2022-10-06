@@ -22,8 +22,8 @@ export default function HomepageFeatures() {
       <code className="codeBlock">
         {
           [
-            "npm install @iradics/react-sliderx@latest",
-            "yarn add @iradics/react-sliderx@latest",
+            "npm install @iradics/react-sliderx",
+            "yarn add @iradics/react-sliderx",
           ][installIndex]
         }
       </code>
