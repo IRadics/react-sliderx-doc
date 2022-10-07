@@ -3,25 +3,76 @@ sidebar_position: 0
 title: Getting started
 ---
 
+<!--ExcludeStart-->
+
 import CodeBlock from "@theme/CodeBlock";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import { SliderXClassic, SliderXSelector } from "@iradics/react-sliderx";
 import { useState } from "react";
+import "./getStarted.css";
 
-export const Browsers = () => {};
+export const browsers = () => {
+  return (
+    <div>
+      <h3>Compatible with all the popular recent browsers</h3>
+      <h4 style={{ paddingTop: "1em" }}>Confirmed compatible:</h4>
+      <ul>
+        <li>Chrome</li>
+        <li>Edge - From Version 79 - using Chromium</li>
+        <li>Firefox - From version 103</li>
+        <li>Safari - From macOS version 13.1</li>
+        <li>Firefox - Android</li>
+        <li>Opera / Opera mini - Android</li>
+      </ul>
+      <h4 style={{ paddingTop: "1em" }}>Not compatible:</h4>
+      <ul>
+        <li>Internet Explorer</li>
+      </ul>
+    </div>
+  );
+};
+
+export const devices = () => {
+  return (
+    <div>
+      {
+        <h3>
+          As it uses the native HTML slider, compatibility is ensured across
+          touchscreen devices
+        </h3>
+      }
+    </div>
+  );
+};
+
+export const typeScript = () => {
+  return <h3>Written in TypeScript</h3>;
+};
+
+export const getSelection = (index) => {
+  switch (index) {
+    case 0:
+      return browsers();
+      break;
+    case 1:
+      return devices();
+    case 2:
+      return typeScript();
+  }
+};
 
 export const SliderXSelectorGetStarted = () => {
   const [hintIndex, setHintIndex] = useState(0);
   const hints = ["test", "2", "3"];
   return (
     <div>
-      <h3>{hints[hintIndex]}</h3>
       <div style={{ width: "75%", margin: "auto" }}>
         <SliderXSelector
+          className={"gettingStartedSlider"}
           optionCount={3}
           defaultOptionIndex={0}
-          colors={["#e1392c", "a4c639", "#3178c6"]}
+          colors={["#e1392c", "#a4c639", "#3178c6"]}
           onChange={(i) => {
             setHintIndex(i);
           }}
@@ -32,27 +83,40 @@ export const SliderXSelectorGetStarted = () => {
           ]}
         ></SliderXSelector>
       </div>
+      <div style={{ height: "100%", paddingTop: "2em", paddingbottom: "2em" }}>
+        {getSelection(hintIndex)}
+      </div>
     </div>
   );
 };
 
-# Getting started
+<SliderXSelectorGetStarted></SliderXSelectorGetStarted>
 
-Add SliderX your project:
+---
+
+<!--ExcludeEnd-->
+
+#### Add SliderX your project:
 
 <Tabs>
   <TabItem value="npm" label="npm">
-    <CodeBlock language={"bash"}>npm install @iradics/react-sliderx</CodeBlock>
+
+```bash
+npm install @iradics/react-sliderx
+```
+
   </TabItem>
   <TabItem value="yarn" label="yarn">
-    <CodeBlock language={"bash"}>yarn add @iradics/react-sliderx</CodeBlock>
+
+```bash
+npm yarn add @iradics/react-sliderx
+```
+
   </TabItem>
 </Tabs>
 
-Import SliderX component(s) into your project:
+#### Import SliderX component(s) into your project:
 
 ```tsx
 import { SliderXClassic, SliderXSelector } from "@iradics/react-sliderx";
 ```
-
-<SliderXSelectorGetStarted></SliderXSelectorGetStarted>
