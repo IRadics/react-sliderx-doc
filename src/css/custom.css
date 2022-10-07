@@ -58,9 +58,11 @@
 }
 
 .sliderXPackageSelectorWrapper {
-  width: 500px;
+  max-width: 500px;
   margin: auto;
   padding-top: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 .sliderXPackageSelector-labels .sliderXPackageSelector-label {
