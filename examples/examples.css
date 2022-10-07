@@ -1,0 +1,42 @@
+.codeExampleDetails {
+  --ifm-alert-border-color: var(--ifm-color-primary);
+  background-color: var(--ifm-pre-background);
+  border-color: var(--ifm-color-primary) !important;
+  border: var(--ifm-alert-border-width) solid var(--ifm-alert-border-color) !important;
+  border-left-width: var(--ifm-alert-border-left-width) !important;
+  border-radius: var(--ifm-alert-border-radius) !important;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.codeExampleDetails summary {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: var(--ifm-heading-font-weight);
+}
+
+.sliderXExample1-labels .sliderXExample1-label {
+  color: whitesmoke;
+}
+
+.sliderXExample1 {
+  --sliderX-thumb-border: 1px solid rgb(163, 163, 163);
+}
+
+.sliderXExample2 {
+  --sliderX-track-height: 1.5em;
+  --sliderX-thumb-height: 1.5em;
+  --sliderX-thumb-width: 2em;
+  --sliderX-thumb-color: magenta;
+  --sliderX-thumb-border-radius: 0.5em;
+  --sliderX-track-border-radius: 0.5em;
+}
+
+.sliderXExample2 .sliderXExample2-labels {
+  position: relative;
+  width: 120%;
+  left: -10%;
+}
+.sliderXExample2-labels .sliderXExample2-label {
+  color: whitesmoke;
+  text-decoration: underline 0.5px;
+}

@@ -1,0 +1,35 @@
+.sliderXColoredThumbExample {
+  /*Blurred gray shadow*/
+  --sliderX-track-box-shadow: 0px 0px 10px #888888;
+  --sliderX-thumb-box-shadow: 0px 0px 10px #888888;
+
+  /*Colored thumb with 2px white border*/
+  --sliderX-thumb-color: var(--sliderX-var-dynamic-color);
+  --sliderX-thumb-border: 2px solid white;
+
+  /*Reversed on hover*/
+  --sliderX-thumb-hover-color: white;
+  --sliderX-thumb-hover-border: 2px solid var(--sliderX-var-dynamic-color);
+
+  /*Full fill on dragging*/
+  --sliderX-thumb-active-color: var(--sliderX-var-dynamic-color);
+  --sliderX-thumb-active-border: 0px;
+
+  /*Finally, "capsule-like" thumb*/
+  --sliderX-thumb-width: 1.5em;
+  --sliderX-thumb-height: 2.5em;
+}
+
+.sliderXLabelStylingExample-labels .sliderXLabelStylingExample-label {
+  padding-top: 0em;
+  color: white;
+  line-height: 100%;
+}
+
+.sliderXLabelStylingExample-labels
+  td:nth-child(3)
+  .sliderXLabelStylingExample-label {
+  color: blue;
+  border-radius: 1em;
+  background-color: #ffd700;
+}

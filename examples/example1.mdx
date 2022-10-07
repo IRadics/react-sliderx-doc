@@ -1,0 +1,63 @@
+import CodeBlock from "@theme/CodeBlock";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { EnumSliderXOptions, SliderXSelector } from "@iradics/react-sliderx";
+
+export const SliderXExample1 = () => (
+  <div style={{ width: "75%", margin: "auto", paddingBottom: "1em" }}>
+    <p></p>
+    <SliderXSelector
+      optionCount={5}
+      colors={["#79ba57", "#a9d359", "#eacd51", "#ee883d", "#e26155"]}
+      labels={[
+        "1\nVery low\nRisk",
+        "2\nLow\nRisk",
+        "3\nMedium\nRisk",
+        "4\nHigh\nRisk",
+        "5\nVery high\nRisk",
+      ]}
+      className={"sliderXExample1"}
+      animationTime={100}
+      defaultOptionIndex={0}
+    >
+      {" "}
+    </SliderXSelector>
+  </div>
+);
+
+<SliderXExample1></SliderXExample1>
+<details className={"codeExampleDetails"}>
+  <summary>Code</summary>
+  <div>
+    <Tabs>
+      <TabItem value="jsx" label="JavaScript">
+        <CodeBlock language={"jsx"}>{`<SliderXSelector
+      optionCount={5}
+      colors={["#79ba57", "#a9d359", "#eacd51", "#ee883d", "#e26155"]}
+      labels={[
+        "1\\nVery low\\nRisk",
+        "2\\nLow\\nRisk",
+        "3\\nMedium\\nRisk",
+        "4\\nHigh\\nRisk",
+        "5\\nVery high\\nRisk",
+      ]}
+      className={"sliderXExample1"}
+      animationTime={100}
+      defaultOptionIndex={0}
+    >
+    </SliderXSelector>`}</CodeBlock>
+      </TabItem>
+      <TabItem value="css" label="CSS">
+          <CodeBlock language={"css"}>{
+`.sliderXExample1-labels .sliderXExample1-label {
+  color: whitesmoke;
+}
+.sliderXExample1 {
+--sliderX-thumb-border: 1px solid rgb(163, 163, 163);
+}
+`}</CodeBlock>
+</TabItem>
+</Tabs>
+
+  </div>
+</details>

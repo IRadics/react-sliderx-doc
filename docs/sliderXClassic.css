@@ -1,0 +1,11 @@
+.sliderXClassicExample {
+  --sliderX-thumb-width: 1.5em;
+  --sliderX-thumb-height: 3em;
+  --sliderX-track-height: 2em;
+  --sliderX-track-border-radius: 0.3em;
+  --sliderX-thumb-border: 5px outset var(--sliderX-var-dynamic-color);
+  --sliderX-thumb-color: white;
+  --sliderX-thumb-color: white;
+  --sliderX-track-box-shadow: 0px 0px 30px var(--sliderX-var-dynamic-color);
+  --sliderX-thumb-box-shadow: 0px 0px 30px var(--sliderX-var-dynamic-color);
+}
