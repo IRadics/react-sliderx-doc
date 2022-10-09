@@ -8,7 +8,32 @@ import { useState } from "react";
 const features = () => {
   return (
     <div>
-      <h3>Easy to customize, lightweight</h3>
+      <div>
+        <a href="https://www.npmjs.com/package/@iradics/react-sliderx">
+          <img
+            className="badgeImg"
+            alt="npm (scoped)"
+            src="https://img.shields.io/npm/v/@iradics/react-sliderx"
+          ></img>
+        </a>
+        <a href="https://www.npmjs.com/package/@iradics/react-sliderx">
+          <img
+            className="badgeImg"
+            alt="npm"
+            src="https://img.shields.io/npm/dm/@iradics/react-sliderx"
+          ></img>
+        </a>
+        <a href="https://github.com/IRadics/react-sliderx/blob/master/license">
+          <img
+            className="badgeImg"
+            alt="MIT License"
+            src="https://img.shields.io/github/license/iradics/react-sliderx"
+          ></img>
+        </a>
+      </div>
+      <div>
+        <h3>Easy to customize, lightweight</h3>
+      </div>
     </div>
   );
 };

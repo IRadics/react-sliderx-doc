@@ -79,6 +79,12 @@ const config = {
             label: "GitHub",
             position: "right",
           },
+          {
+            href: "https://www.buymeacoffee.com/iradics",
+            label: "Buy me a beer",
+            position: "left",
+            className: "donate",
+          },
         ],
       },
       footer: {

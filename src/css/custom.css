@@ -92,3 +92,20 @@
   color: #2f8eb8;
   text-decoration-line: underline;
 }
+
+.badgeImg {
+  padding: 5px;
+}
+
+.donate {
+  color: VAR(--ifm-color-primary);
+
+  border: 1px SOLID VAR(--ifm-color-primary);
+  border-radius: 0.5em;
+  margin-left: 1em;
+}
+
+.donate:hover {
+  color: var(--ifm-font-color-base);
+  border-color: var(--ifm-font-color-base);
+}
