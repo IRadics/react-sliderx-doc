@@ -32,7 +32,7 @@ const features = () => {
         </a>
       </div>
       <div>
-        <h3>Easy to customize, lightweight</h3>
+        <h3>Simple to set up, easy to customize, lightweight</h3>
       </div>
     </div>
   );
@@ -43,7 +43,7 @@ export default function HomepageFeatures() {
   return (
     <div className={styles.mainBody}>
       {features()}
-      <h2>Install:</h2>
+      <h2 style={{ paddingBottom: "10px" }}>Install:</h2>
       <code className="codeBlock">
         {
           [
