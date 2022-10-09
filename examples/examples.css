@@ -40,3 +40,42 @@
   color: whitesmoke;
   text-decoration: underline 0.5px;
 }
+
+.sliderXExample3 {
+  --sliderX-track-box-shadow: 0px 0px 0px 2px #6b6b6b, 0px 0px 15px 0px #a7a7a7;
+  --sliderX-track-height: 10px;
+  --sliderX-track-border-radius: 4px;
+  --sliderX-thumb-width: 4em;
+  --sliderX-thumb-height: calc(5em - 18px);
+  --sliderX-thumb-border: 3px solid var(--sliderX-var-dynamic-color);
+  --sliderX-thumb-border-radius: 0em 0em 1em 1em;
+  --sliderX-thumb-offset: 2em;
+  --sliderX-thumb-color: transparent;
+  --sliderX-thumb-hover-color: rgba(255, 255, 255, 0.1);
+  --sliderX-thumb-active-color: rgba(255, 255, 255, 0.1);
+}
+
+.sliderXExample3-labels .sliderXExample3-label {
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+.sliderXExample3-labels td:nth-child(1) .sliderXExample3-label {
+  color: RGB(158, 44, 32);
+  text-decoration-line: underline;
+}
+
+.sliderXExample3-labels td:nth-child(2) .sliderXExample3-label {
+  color: RGBA(2, 50, 209, 1);
+  text-decoration-line: underline;
+}
+
+.sliderXExample3-labels td:nth-child(3) .sliderXExample3-label {
+  color: #ebeb00;
+  text-decoration-line: underline;
+}
+
+.sliderXExample3-labels td:nth-child(4) .sliderXExample3-label {
+  color: #ffffff;
+  text-decoration-line: underline;
+}
