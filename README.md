@@ -1,6 +1,7 @@
-# Docusaurus 2
+# SliderX Documentation site
 
-This directory is a brief example of a [Docusaurus](https://v2.docusaurus.io) site that can be deployed to Vercel with zero configuration.
+Docosuaurus documentation site for the SliderX React component.
+Additionally, it automatically generates a GitHub/npmjs compatible readme.md file for the SliderX repository, using npm-watch, markdown-include and custom conversion script.
 
 ## Deploy Your Own
 
